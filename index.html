@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label> Forneça um numero: </label>
+        <input type="text" id="numero" >
+    </div>
+
+    <div>
+        <input type="button" value="Calcular" onclick="calcularFatorial()">
+    </div>
+
+    <script>
+        function calcularFatorial() {
+            var numeroRecebido = parseInt(document.getElementById('numero').value);
+            var fatorial = numeroRecebido;
+
+            // alert(numeroRecebido);
+            if (numeroRecebido == 0) {
+                fatorial = 1;
+            } else {
+                for (var i=numeroRecebido-1; i>=1; i--) {
+                    fatorial *= i;
+                }
+            }
+
+            alert(fatorial);
+        }
+    </script>
+</body>
+</html>
